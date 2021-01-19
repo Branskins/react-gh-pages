@@ -18,7 +18,6 @@ code {
 
 a {
   text-decoration: none;
-
   font-size: 16px;
 }
 
@@ -44,23 +43,30 @@ h1 {
   color: #21243D;
   font-size: 44px;
   font-weight: bold;
-  line-height: 64px;
-  /* margin-top: 0px;
-  margin-bottom: 0px; */
+  line-height: 60px;
+}
+
+h2 {
+  color: #21243D;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0px;
+  margin-bottom: 16px;
+  line-height: 24px;
 }
 
 h4 {
   color: #21243D;
   font-size: 22px;
   font-weight: normal;
-  line-height: 64px;
+  line-height: 60px;
   margin-top: 0px;
   margin-bottom: 0px;
 }
 
 p {
   font-size: 16px;
-  line-height: 36px;
+  line-height: 32px;
   color: #21243D;
 }
 
@@ -76,5 +82,10 @@ p {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .wrapper h4 {
+    font-size: 18px;
+    text-align: center;
   }
 }
