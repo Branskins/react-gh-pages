@@ -1,6 +1,7 @@
 .nav-container {
   display: flex;
   justify-content: flex-end;
+  padding-top: 20px;
 }
 
 .nav-container > * {
