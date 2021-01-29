@@ -7,7 +7,7 @@ export default class Nav extends Component {
     return (
       <div className="wrapper">
         <ul className="nav-container">
-          <li><Link to="/">Home</Link></li>
+          <li><Link to="/react-gh-pages">Home</Link></li>
           <li><Link to="/works">Works</Link></li>
           <li><Link to="/blog">Blog</Link></li>
           <li><Link to="/contact">Contact</Link></li>

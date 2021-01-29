@@ -15,7 +15,7 @@ function App() {
       <BrowserRouter>
       <Nav />
         <Switch>
-          <Route exact path="/">
+          <Route exact path="/react-gh-pages">
             <Land />
             <RecentPost />
             <FeaturedWork />
