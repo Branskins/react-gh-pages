@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Nav from './components/nav/nav';
 import Land from './components/land/land';
 import RecentPost from './components/recent-post/recent-post';
-import FeaturedWork from './components/featured-work/featured-work';
+import FeaturedWork from './components/works/featured-work';
 import Blog from './components/blog/blog';
 import Works from './components/works/works';
 import Contact from './components/contact/contact';

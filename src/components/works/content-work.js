@@ -1,14 +1,13 @@
 import React, { Component } from 'react'
+import './works.css'
 import t1 from '../../assets/t1.png'
 import t2 from '../../assets/t2.png'
 import t3 from '../../assets/t3.png'
-import './featured-work.css'
 
-export default class FeaturedWork extends Component {
+export default class ContentWork extends Component {
   render() {
     return (
-      <div className="wrapper">
-        <h4>Featured works</h4>
+      <div>
         <div className="feature-container">
           <img className="feature-picture" src={t1} alt="" />
           <div className="feature-content">

@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 import ContentWork from './content-work'
 
-export default class FeaturedWork extends Component {
+export default class FeatureWork extends Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>Works</h1>
+        <h4>Featured works</h4>
         <ContentWork />
       </div>
     )
