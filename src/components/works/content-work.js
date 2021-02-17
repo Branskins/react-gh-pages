@@ -1,50 +1,68 @@
-import React, { Component } from 'react'
+import React from 'react'
+import { Route, Link, Switch, useRouteMatch } from 'react-router-dom'
 import './works.css'
 import t1 from '../../assets/t1.png'
 import t2 from '../../assets/t2.png'
 import t3 from '../../assets/t3.png'
+import DesigningDashboards from './content/designing-dashboards'
+import VibrantPortraits from './content/vibrant-portraits'
+import DaysMalayalam from './content/days-malayalam'
 
-export default class ContentWork extends Component {
-  render() {
-    return (
-      <div>
-        <div className="feature-container">
-          <img className="feature-picture" src={t1} alt="" />
-          <div className="feature-content">
-            <h2>Designing Dashboards</h2>
-            <div>
-              <span className="badge">2020</span>
-              <span className="topic">Dashboard</span>
-            </div>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+export default function ContentWork() {
+
+  let { path, url } = useRouteMatch()
+
+  return (
+    <div>
+      <div className="feature-container">
+        <img className="feature-picture" src={t1} alt="" />
+        <div className="feature-content">
+          <h2><Link to={`${url}/designingdashboards`}>Designing Dashboards</Link></h2>
+          <div>
+            <span className="badge">2020</span>
+            <span className="topic">Dashboard</span>
           </div>
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
         </div>
-        {/* First container */}
-        <div className="feature-container">
-          <img className="feature-picture" src={t2} alt="" />
-          <div className="feature-content">
-            <h2>Vibrant Portraits of 2020</h2>
-            <div>
-              <span className="badge">2018</span>
-              <span className="topic">Illustration</span>
-            </div>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
-        </div>
-        {/* Second container */}
-        <div className="feature-container">
-          <img className="feature-picture" src={t3} alt="" />
-          <div className="feature-content">
-            <h2>36 Days of Malayalam type</h2>
-            <div>
-              <span className="badge">2020</span>
-              <span className="topic">Typography</span>
-            </div>
-            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
-          </div>
-        </div>
-        {/* Third container */}
       </div>
-    )
-  }
+      {/* First container */}
+      <div className="feature-container">
+        <img className="feature-picture" src={t2} alt="" />
+        <div className="feature-content">
+          <h2><Link to={`${url}/vibrantportraits`}>Vibrant Portraits of 2020</Link></h2>
+          <div>
+            <span className="badge">2018</span>
+            <span className="topic">Illustration</span>
+          </div>
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </div>
+      </div>
+      {/* Second container */}
+      <div className="feature-container">
+        <img className="feature-picture" src={t3} alt="" />
+        <div className="feature-content">
+          <h2><Link to={`${url}/daysmalayalam`}>36 Days of Malayalam type</Link>
+          </h2>
+          <div>
+            <span className="badge">2020</span>
+            <span className="topic">Typography</span>
+          </div>
+          <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+        </div>
+      </div>
+      {/* Third container */}
+      <Switch>
+        <Route path={`${path}/designingdashboards`}>
+          <DesigningDashboards />
+        </Route>
+        <Route path={`${path}/vibrantportraits`}>
+          <VibrantPortraits />
+        </Route>
+        <Route path={`${path}/daysmalayalam`}>
+          <DaysMalayalam />
+        </Route>
+      </Switch>
+    </div>
+  )
+
 }
