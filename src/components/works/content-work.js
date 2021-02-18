@@ -1,23 +1,17 @@
 import React from 'react'
-import { Route, Link, Switch, useRouteMatch } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './works.css'
 import t1 from '../../assets/t1.png'
 import t2 from '../../assets/t2.png'
 import t3 from '../../assets/t3.png'
-import DesigningDashboards from './content/designing-dashboards'
-import VibrantPortraits from './content/vibrant-portraits'
-import DaysMalayalam from './content/days-malayalam'
 
 export default function ContentWork() {
-
-  let { path, url } = useRouteMatch()
-
   return (
     <div>
       <div className="feature-container">
         <img className="feature-picture" src={t1} alt="" />
         <div className="feature-content">
-          <h2><Link to={`${url}/designingdashboards`}>Designing Dashboards</Link></h2>
+          <h2><Link to='/works/designingdashboards'>Designing Dashboards</Link></h2>
           <div>
             <span className="badge">2020</span>
             <span className="topic">Dashboard</span>
@@ -29,7 +23,7 @@ export default function ContentWork() {
       <div className="feature-container">
         <img className="feature-picture" src={t2} alt="" />
         <div className="feature-content">
-          <h2><Link to={`${url}/vibrantportraits`}>Vibrant Portraits of 2020</Link></h2>
+          <h2><Link to='/works/vibrantportraits'>Vibrant Portraits of 2020</Link></h2>
           <div>
             <span className="badge">2018</span>
             <span className="topic">Illustration</span>
@@ -41,7 +35,7 @@ export default function ContentWork() {
       <div className="feature-container">
         <img className="feature-picture" src={t3} alt="" />
         <div className="feature-content">
-          <h2><Link to={`${url}/daysmalayalam`}>36 Days of Malayalam type</Link>
+          <h2><Link to='/works/daysmalayalam'>36 Days of Malayalam type</Link>
           </h2>
           <div>
             <span className="badge">2020</span>
@@ -51,18 +45,6 @@ export default function ContentWork() {
         </div>
       </div>
       {/* Third container */}
-      <Switch>
-        <Route path={`${path}/designingdashboards`}>
-          <DesigningDashboards />
-        </Route>
-        <Route path={`${path}/vibrantportraits`}>
-          <VibrantPortraits />
-        </Route>
-        <Route path={`${path}/daysmalayalam`}>
-          <DaysMalayalam />
-        </Route>
-      </Switch>
     </div>
   )
-
 }
